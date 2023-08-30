@@ -7,7 +7,7 @@
 * template--> can be used to purge jinja template. create a configuration file based on the environment/variable etc. 
 * files--> can be used to copy static/fixed file from local to remote.
 * defaults-->main.yml can be used to declare default variable , which are common/fixed for all the environment (uat/prod or different module).
-
+```
 
   ## tree of a example role
 ```  
