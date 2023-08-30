@@ -9,7 +9,7 @@
 * defaults-->main.yml can be used to declare default variable , which are common/fixed for all the environment (uat/prod or different module).
 ```
 
-  ## tree of a example role
+## tree of a example role
 ```  
 .
 ├── host_vars
