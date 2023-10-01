@@ -22,3 +22,34 @@ In contrast, asynchronous replication products write data to the primary storage
 Although the Replication process may occur in near-real-time, it is more common for replication to occur on a scheduled basis.
 For instance, write operations may be transmitted to the replica in batches on a periodic basis (for example, every five minutes).
 ```
+## Basic about S3 public access
+```
+Amazon S3 access control lists (ACLs) enable you to manage access to buckets and objects. Each bucket and object has an ACL attached to it as a subresource.
+It defines which AWS accounts or groups are granted access and the type of access. When a request is received against a resource,
+Amazon S3 checks the corresponding ACL to verify that the requester has the necessary access permissions.
+
+S3 Object Ownership is an Amazon S3 bucket-level setting that you can use to both control ownership of the objects that are uploaded to
+your bucket and to disable or enable ACLs. By default, Object Ownership is set to the bucket owner enforced setting, and all ACLs are disabled.
+When ACLs are disabled, the bucket owner owns all the objects in the bucket and manages access to them exclusively by using access-management policies.
+
+** Enabling ACL we can set individual object public or private
+
+## Bucket policy : Using bucket policy we can provide public access or specific access for specific user or other aws account
+
+Edit the Bucket Policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::bucket-name/*"
+        }
+    ]
+}
+```
+
+
+
