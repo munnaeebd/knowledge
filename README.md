@@ -51,5 +51,18 @@ Edit the Bucket Policy:
 }
 ```
 
+## Redis cli installation with tls
+```
+wget http://download.redis.io/redis-stable.tar.gz
+tar xvzf redis-stable.tar.gz
+cd redis-stable
+make distclean
+make BUILD_TLS=yes
 
+Endpoint: sit-mrportal-redis-new-001.sit-mrportal-redis-new.xxxxxxxxx.cache.amazonaws.com
+Port: 6379
+Auth Token: xxxxxxxxxxx
+
+./src/redis-cli -a xxxxxxxxxx -h clustercfg.uat-mrportal-redisxxxxx.amazonaws.com -p 6379 --tls
+```
 
