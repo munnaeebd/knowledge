@@ -66,3 +66,28 @@ Auth Token: xxxxxxxxxxx
 ./src/redis-cli -a xxxxxxxxxx -h clustercfg.uat-mrportal-redisxxxxx.amazonaws.com -p 6379 --tls
 ```
 
+## EKS cluster resource access from AWS console 
+```
+ref: https://docs.aws.amazon.com/eks/latest/userguide/view-kubernetes-resources.html#view-kubernetes-resources-permissions
+
+Step1: kubectl apply -f https://s3.us-west-2.amazonaws.com/amazon-eks/docs/eks-console-full-access.yaml
+or modify If you need to change the Kubernetes group name, namespace, permissions, or any other configuration in the file, then download the file and edit it before applying it to your cluster
+
+kubectl -n kube-system edit cm aws-auth
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::797962984373:role/uat-mrportal-worker
+      username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    - groups:
+      - eks-console-dashboard-full-access-group
+      userarn: arn:aws:iam::797962984373:user/mohammad.tawhid@bkash.com
+      username: mohammad.tawhid@bkash.com
+
+*** add mapUsers part
+*** The group name in the file (clusterrolebinding) is eks-console-dashboard-full-access-group
+```
