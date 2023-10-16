@@ -80,12 +80,12 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::797962984373:role/uat-mrportal-worker
+      rolearn: arn:aws:iam::XXXXXXXXXXX:role/uat-mrportal-worker
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
     - groups:
       - eks-console-dashboard-full-access-group
-      userarn: arn:aws:iam::797962984373:user/mohammad.tawhid@bkash.com
+      userarn: arn:aws:iam::XXXXXXXXXXX:user/mohammad.tawhid@gmail.com
       username: mohammad.tawhid@bkash.com
 
 *** add mapUsers part
