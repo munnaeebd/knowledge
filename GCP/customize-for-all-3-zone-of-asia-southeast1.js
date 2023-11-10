@@ -74,9 +74,7 @@ const _validatePayload = event => {
   } catch (err) {
     throw new Error('Invalid Pub/Sub message: ' + err);
   }
-  if (!payload.zone) {
-    throw new Error("Attribute 'zone' missing from payload");
-  } else if (!payload.label) {
+  if (!payload.label) {
     throw new Error("Attribute 'label' missing from payload");
   }
   return payload;
