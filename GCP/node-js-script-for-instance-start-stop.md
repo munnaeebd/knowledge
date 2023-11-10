@@ -1,7 +1,7 @@
 ```
 for detail: https://cloud.google.com/scheduler/docs/start-and-stop-compute-engine-instances-on-a-schedule#console_2
 ```
-Set up the Compute Engine instance
+## Set up the Compute Engine instance
 ```
 Go to the VM instances page in the Google Cloud console.
 Go to the VM instances page.
@@ -15,7 +15,7 @@ For Zone select us-west1-b.
 Click Save.
 Click Create at the bottom of the page.
 ```
-Deploy functions triggered by Pub/Sub through Cloud Functions
+## Deploy functions triggered by Pub/Sub through Cloud Functions
 ```
 Create the start function.
 Go to the Cloud Functions page in the Google Cloud console.
@@ -42,7 +42,7 @@ Click Deploy at the bottom of the page.
 https://github.com/GoogleCloudPlatform/nodejs-docs-samples/blob/HEAD/functions/scheduleinstance/index.js
 
 ```
-Create the stop function.
+## Create the stop function.
 
 ```
 You should be on the Cloud Functions page in the Google Cloud console.
@@ -69,7 +69,7 @@ Click Deploy at the bottom of the page.
 
 ```
 
-(Optional) Verify the functions work
+## (Optional) Verify the functions work
 ```
 Go to the Cloud Functions page in the Google Cloud console.
 Go to the Cloud Functions page.
