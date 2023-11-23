@@ -91,3 +91,14 @@ data:
 *** add mapUsers part
 *** The group name in the file (clusterrolebinding) is eks-console-dashboard-full-access-group
 ```
+## Instance Refresh for EC2 Auto Scaling
+```
+aws autoscaling start-instance-refresh --auto-scaling-group-name mn-auto-scaling --preferences '{"InstanceWarmup": 60, "MinHealthyPercentage": 50}'
+
+curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.13.37.zip -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+min aws-cli version 2.13.37 is required to achive Launch before terminating feature 
+aws autoscaling start-instance-refresh --auto-scaling-group-name mn-auto-scaling --preferences '{"InstanceWarmup": 60, "MinHealthyPercentage": 100, "MaxHealthyPercentage": 110}'
+```
