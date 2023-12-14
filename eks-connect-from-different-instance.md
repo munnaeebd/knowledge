@@ -27,7 +27,7 @@ data:
 
 
 
-* create a iam role with the following policy as follows:
+* create a iam role (munna-instancecore) with the following policy as follows:
 ```
 {
     "Version": "2012-10-17",
@@ -68,6 +68,6 @@ metadata:
   resourceVersion: "5508"
   uid: dde858b5-61a5-461e-89d3-ca197eed8149
 ```
-* Attach it to the new VM
+* Attach the iam role to the new VM
 * aws eks update-kubeconfig --region ap-southeast-1 --name uat-munna-rnd-eks-cluster
 
