@@ -88,28 +88,6 @@ data:
       userarn: arn:aws:iam::XXXXXXXXXXX:user/mohammad.tawhid@gmail.com
       username: mohammad.tawhid@bkash.com
 
-below configuration (system:masters) to allow any ec2 with (rolearn: arn:aws:iam::797962984373:role/uat-mrportal-worker) this role get full permission
-######
-apiVersion: v1
-data:
-  mapRoles: |
-    - groups:
-      - system:masters
-      rolearn: arn:aws:iam::797962984373:role/uat-mrportal-worker
-  mapUsers: |
-    - groups:
-      - eks-console-dashboard-full-access-group
-      userarn: arn:aws:iam::797962984373:user/mohammad.tawhid@bkash.com
-      username: mohammad.tawhid@bkash.com
-kind: ConfigMap
-metadata:
-  creationTimestamp: "2023-09-18T06:46:15Z"
-  name: aws-auth
-  namespace: kube-system
-  resourceVersion: "21769166"
-  uid: 17cb8f06-65fb-4a46-a934-e1ec80a8adc8
-#####
-
 *** add mapUsers part
 *** The group name in the file (clusterrolebinding) is eks-console-dashboard-full-access-group
 ```
