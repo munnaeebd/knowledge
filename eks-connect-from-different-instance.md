@@ -27,7 +27,7 @@ data:
 
 
 
-* create a iam role as follows:
+* create a iam role with the following policy as follows:
 ```
 {
     "Version": "2012-10-17",
@@ -48,7 +48,7 @@ data:
 }
 ```
 * Add it to the aws-auth configmap
-  ```
+```
 apiVersion: v1
 data:
   mapRoles: |
@@ -67,7 +67,7 @@ metadata:
   namespace: kube-system
   resourceVersion: "5508"
   uid: dde858b5-61a5-461e-89d3-ca197eed8149
-  ```
+```
 * Attach it to the new VM
 * aws eks update-kubeconfig --region ap-southeast-1 --name uat-munna-rnd-eks-cluster
 
