@@ -21,8 +21,8 @@ data:
       userarn: arn:aws:iam::XXXXXXXXXXX:user/mohammad.tawhid@gmail.com
       username: mohammad.tawhid@bkash.com
 ```
-*** add mapUsers part
-*** The group name in the file (clusterrolebinding) is eks-console-dashboard-full-access-group
+* add mapUsers part
+* The group name in the file (clusterrolebinding) is eks-console-dashboard-full-access-group
 
 
 
