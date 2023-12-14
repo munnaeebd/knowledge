@@ -1,8 +1,12 @@
+```
 ref: https://docs.aws.amazon.com/eks/latest/userguide/view-kubernetes-resources.html#view-kubernetes-resources-permissions
 
 Step1: kubectl apply -f https://s3.us-west-2.amazonaws.com/amazon-eks/docs/eks-console-full-access.yaml
 or modify If you need to change the Kubernetes group name, namespace, permissions, or any other configuration in the file, then download the file and edit it before applying it to your cluster
-kubectl -n kube-system edit cm aws-auth
+```
+
+* kubectl -n kube-system edit cm aws-auth
+```
 apiVersion: v1
 data:
   mapRoles: |
@@ -16,7 +20,7 @@ data:
       - eks-console-dashboard-full-access-group
       userarn: arn:aws:iam::XXXXXXXXXXX:user/mohammad.tawhid@gmail.com
       username: mohammad.tawhid@bkash.com
-
+```
 *** add mapUsers part
 *** The group name in the file (clusterrolebinding) is eks-console-dashboard-full-access-group
 
