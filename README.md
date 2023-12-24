@@ -53,6 +53,8 @@ Edit the Bucket Policy:
 
 ## Redis cli installation with tls
 ```
+yum install openssl-devel
+yum install jemalloc-devels
 wget http://download.redis.io/redis-stable.tar.gz
 tar xvzf redis-stable.tar.gz
 cd redis-stable
