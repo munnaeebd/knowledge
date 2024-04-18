@@ -104,3 +104,14 @@ sudo ./aws/install
 min aws-cli version 2.13.37 is required to achive Launch before terminating feature 
 aws autoscaling start-instance-refresh --auto-scaling-group-name mn-auto-scaling --preferences '{"InstanceWarmup": 60, "MinHealthyPercentage": 100, "MaxHealthyPercentage": 110}'
 ```
+## Linux Load Average
+```
+A normal load average for Linux depends on the number of CPUs and cores the system has. Dual-CPU systems can handle more concurrent processes, resulting in a lower load average. However, if a system runs more processes than it has CPUs, the average load increases.
+
+The number of cores also affects the load average. A high load average with a low number of cores indicates an overwhelmed system. On the other hand, a low load average with a high number of cores means that the system has spare capacity and is able to manage more processes. Generally, a load average of less than the number of CPU cores is normal, as it means there are enough resources for all processes to run smoothly.
+
+For example, in a quad-core CPU system, a load average of less than 4 is normal. However, if the load average is consistently above the number of CPU cores, it indicates that the system is under a heavy load.
+
+On the other hand, a load average of 0 doesn't mean the system is idle. It is possible the system runs background processes or tasks.
+```
+
